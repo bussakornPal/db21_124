@@ -42,4 +42,14 @@ class laboratory{
         return $labList;
     }
 
+    public static function add($id_lab,$name_lab,$address_lab)
+    {   
+        require("connection_database.php");
+        $sql = "INSERT INTO `laboratory`(`id_lab`,`name_lab`,`address_lab`)
+        values('$id_lab','$name_lab','$address_lab');";
+        $result = $conn->query($sql);
+        require("connection_close.php");
+        return ;
+    }
+
 }
