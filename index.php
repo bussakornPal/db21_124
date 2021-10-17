@@ -16,8 +16,8 @@ else
     <body>
         <?php echo "controller= ".$controller.",action= ".$action;?>
         <br>[<a href="?controller=pages&action=home">Home</a>]
-        <!--<br>[<a href="?controller=laboratory&action=index">Laboratory</a>]
-        <br>[<a href="?controller=staff_in_lab&action=index">Staff in lab</a>]
+            [<a href="?controller=laboratory&action=index">Laboratory</a>]
+        <!--[<a href="?controller=staff_in_lab&action=index">Staff in lab</a>]
         -->
         <?php require_once("./routes.php");?>
     </body>

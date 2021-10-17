@@ -1,5 +1,5 @@
 <?php
-$controllers=array('pages'=>['home','error']);
+$controllers=array('pages'=>['home','error'],'laboratory'=>['index']);
 
 function call($controller,$action){
     require_once("./controllers/".$controller."_controller.php");
@@ -7,6 +7,9 @@ function call($controller,$action){
     {
         case "pages":    $controller = new PagesController();
                          break;
+        case "laboratory":  require_once('./models/laboratoryModel.php');
+                            $controller=new Laboratory_Controller();
+                            break;
     }
     $controller->{$action}();
 }
