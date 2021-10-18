@@ -1,5 +1,5 @@
 <?php
-$controllers=array('pages'=>['home','error'],'laboratory'=>['index','newLaboratory','addLaboratory']);
+$controllers=array('pages'=>['home','error'],'laboratory'=>['index','newLaboratory','addLaboratory','search','updateForm','update']);
 
 function call($controller,$action){
     require_once("./controllers/".$controller."_controller.php");

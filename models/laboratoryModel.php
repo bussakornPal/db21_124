@@ -52,4 +52,33 @@ class laboratory{
         return ;
     }
 
+    public static function search($key)
+    {
+        $labList=[];
+        require("connection_database.php");
+        $sql="SELECT id_lab,name_lab,address_lab FROM laboratory WHERE (id_lab like'%$key%' or name_lab like'%$key%' or address_lab like'%$key%') ORDER BY id_lab";
+        $result=$conn->query($sql);
+        while($my_row=$result->fetch_assoc())
+        {
+            $id_lab=$my_row[id_lab];
+            $name_lab=$my_row[name_lab];
+            $address_lab=$my_row[address_lab];
+            $labList[]=new laboratory($id_lab,$name_lab,$address_lab);
+
+        }
+        require("connection_close.php");
+        return $labList;
+    
+    }
+    public static function update($id_lab,$name_lab,$address_lab,$id)
+    {
+        require("connection_database.php");
+        $sql="UPDATE `laboratory` SET `id_lab`='$id_lab',`name_lab`='$name_lab',
+        `address_lab`='$address_lab' WHERE id_lab = '$id'";
+        $result=$conn->query($sql);
+        require("connection_close.php");
+        return ;
+
+    }
+
 }
