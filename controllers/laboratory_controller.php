@@ -41,5 +41,17 @@
         laboratory::update($id_lab,$name_lab,$address_lab,$id);
         Laboratory_Controller::index();
     }
+    public function deleteConfirm()
+    {
+        $id=$_GET['id_lab'];
+        $lab=laboratory::get($id);
+        require_once('./views/laboratory/deleteConfirm.php');
+    }
+    public function delete()
+    {
+        $id=$_GET['id'];
+        laboratory::delete($id);
+        Laboratory_Controller::index();
+    }
 
 }?>

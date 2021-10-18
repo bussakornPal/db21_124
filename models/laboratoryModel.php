@@ -80,5 +80,13 @@ class laboratory{
         return ;
 
     }
+    public static function delete($id)
+    {
+        require("connection_database.php");
+        $sql="DELETE FROM `laboratory` WHERE id_lab ='$id'";
+        $result=$conn->query($sql);
+        require("connection_close.php");
+        return ;
+    }
 
 }
