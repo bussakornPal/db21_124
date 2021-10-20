@@ -21,7 +21,7 @@ search</button>
                <a href=?controller=laboratory&action=updateForm&id_lab=$lab->id_lab>update</a>
                </td> 
                <td>
-               <a href=?controller=laboratory&action=deleteConfirm&id_lab=$lab->id_lab>delete
+               <a href=?controller=laboratory&action=deleteConfirm&id_lab=$lab->id_lab>delete</a>
                </td> 
             </tr>";
 }
