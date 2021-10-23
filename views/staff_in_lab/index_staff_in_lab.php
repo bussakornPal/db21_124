@@ -1,5 +1,7 @@
 <table border = 1> 
 
+<br>new Staff in lab <a href=?controller=staff_in_lab&action=newStaff_in_lab> click</a><br>
+
 <tr> 
     <td>เลขประจำตัวพนักงาน</td> <td>ชื่อ</td> <td>นามสกุล</td> <td>เบอร์โทรศัพท์</td> 
     <td>ที่อยู่</td> <td>ชื่อห้องปฏิบัติการ</td> <td>รหัสห้องปฏิบัติการ</td>

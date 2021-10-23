@@ -58,5 +58,14 @@
         return $staffList;
 
     }
+    public static function add($id_staff_inlab,$first_name_inlab,$last_name_inlab,$phone_staff,$address_staff_inlab,$id_lab)
+    {   
+        require("connection_database.php");
+        $sql = "INSERT INTO `staff_in_lab`(`id_staff_inlab`,`first_name_inlab`,`last_name_inlab`,`phone_staff`,`address_staff_inlab`,`id_lab`)
+        values('$id_staff_inlab','$first_name_inlab','$last_name_inlab','$phone_staff','$address_staff_inlab','$id_lab');";
+        $result = $conn->query($sql);
+        require("connection_close.php");
+        return ;
+    }
 
 }
