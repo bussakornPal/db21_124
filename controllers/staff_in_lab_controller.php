@@ -34,6 +34,18 @@
         $lab=laboratory::getAll();
         require_once('./views/staff_in_lab/updateForm.php');
     }
+    public function update()
+    {   
+        $id_staff_inlab=$_GET['id_staff_inlab'];
+        $first_name_inlab=$_GET['first_name_inlab'];
+        $last_name_inlab=$_GET['last_name_inlab'];
+        $phone_staff=$_GET['phone_staff'];
+        $address_staff_inlab=$_GET['address_staff_inlab'];
+        $id_lab=$_GET['id_lab'];
+        $id=$_GET['id'];
+        staff_in_lab::update($id_staff_inlab,$first_name_inlab,$last_name_inlab,$phone_staff,$address_staff_inlab,$id_lab,$id);
+        Staff_In_Lab_Controller::index();
+    }
 
 }
 ?>
