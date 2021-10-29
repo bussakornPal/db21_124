@@ -90,5 +90,15 @@
         return $staffList;
     
     }
+    public static function update($id_staff_inlab,$first_name_inlab,$last_name_inlab,$phone_staff,$address_staff_inlab,$name_lab,$id_lab,$id)
+    {
+        require("connection_database.php");
+        $sql="UPDATE `staff_in_lab` SET `id_staff_inlab`='$id_staff_inlab',`first_name_inlab`='$first_name_inlab',`last_name_inlab`='$last_name_inlab',`phone_staff`='$phone_staff',
+        `address_staff_inlab`='$address_staff_inlab',`name_lab`='$name_lab',`id_lab`='$id_lab' WHERE id_staff_inlab = '$id_staff_inlab'";
+        $result=$conn->query($sql);
+        require("connection_close.php");
+        return ;
+
+    }
 
 }

@@ -26,10 +26,10 @@ search</button>
                <td>$stafflab->id_lab</td> 
 
                <td>
-               update
+               <a href=?controller=staff_in_lab&action=updateForm&id_staff_inlab=$stafflab->id_staff_inlab>update</a>
                </td> 
                <td>
-               delete
+               <a href=?controller=staff_in_lab&action=deleteConfirm&id_staff_inlab=$stafflab->id_staff_inlab>delete</a>
                </td> 
             </tr>";
 }

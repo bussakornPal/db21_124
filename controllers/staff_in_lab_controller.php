@@ -27,5 +27,12 @@
         $staff_in_lab_List=staff_in_lab::search($key);
         require_once("./views/staff_in_lab/index_staff_in_lab.php");
     }
+    public function updateForm()
+    {
+        $id_staff_inlab=$_GET['id_staff_inlab'];
+        $stafflab=staff_in_lab::get($id_staff_inlab);
+        require_once('./views/staff_in_lab/updateForm.php');
+    }
+
 }
 ?>
