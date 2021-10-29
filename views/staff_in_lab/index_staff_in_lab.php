@@ -8,7 +8,12 @@
     <td>update</td> <td>delete</td> 
 </tr> 
 
-
+<form method="get" action="">
+        <input type="text" name="key">
+        <input type="hidden" name="controller" value="staff_in_lab">
+        <button type="submit" name="action" value="search">
+search</button>
+</form>
 
 <?php foreach($staff_in_lab_List as $stafflab)
 {

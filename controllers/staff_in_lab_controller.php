@@ -21,5 +21,11 @@
         staff_in_lab::add($id_staff_inlab,$first_name_inlab,$last_name_inlab,$phone_staff,$address_staff_inlab,$id_lab);
         Staff_In_Lab_Controller::index();
     }
+    public function search()
+    {
+        $key=$_GET['key'];
+        $staff_in_lab_List=staff_in_lab::search($key);
+        require_once("./views/staff_in_lab/index_staff_in_lab.php");
+    }
 }
 ?>
