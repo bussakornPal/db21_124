@@ -100,5 +100,13 @@
         return ;
 
     }
+    public static function delete($id)
+    {
+        require("connection_database.php");
+        $sql="DELETE FROM `staff_in_lab` WHERE id_staff_inlab ='$id'";
+        $result=$conn->query($sql);
+        require("connection_close.php");
+        return ;
+    }
 
 }

@@ -46,6 +46,11 @@
         staff_in_lab::update($id_staff_inlab,$first_name_inlab,$last_name_inlab,$phone_staff,$address_staff_inlab,$id_lab,$id);
         Staff_In_Lab_Controller::index();
     }
-
+    public function deleteConfirm()
+    {
+        $id=$_GET['id_staff_inlab'];
+        $stafflab=staff_in_lab::get($id);
+        require_once('./views/staff_in_lab/deleteConfirm.php');
+    }
 }
 ?>
