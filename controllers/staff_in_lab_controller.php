@@ -52,5 +52,12 @@
         $stafflab=staff_in_lab::get($id);
         require_once('./views/staff_in_lab/deleteConfirm.php');
     }
+    public function delete()
+    {
+        $id=$_GET['id'];
+        staff_in_lab::delete($id);
+        Staff_In_Lab_Controller::index();
+    }
+
 }
 ?>
