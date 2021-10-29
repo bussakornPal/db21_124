@@ -31,6 +31,7 @@
     {
         $id_staff_inlab=$_GET['id_staff_inlab'];
         $stafflab=staff_in_lab::get($id_staff_inlab);
+        $lab=laboratory::getAll();
         require_once('./views/staff_in_lab/updateForm.php');
     }
 

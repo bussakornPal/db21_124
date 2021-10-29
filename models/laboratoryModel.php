@@ -29,7 +29,7 @@ class laboratory{
     {
         $labList=[];
         require("connection_database.php");
-        $sql="SELECT * FROM laboratory";
+        $sql="SELECT id_lab,name_lab,address_lab FROM laboratory";
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {

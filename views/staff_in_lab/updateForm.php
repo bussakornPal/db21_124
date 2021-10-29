@@ -20,14 +20,14 @@
     ที่อยู่ <input type="text" name="address_staff_inlab"
     value="<?php echo $stafflab->address_staff_inlab;?>"/>
 </label><br>
-<label> 
-    ชื่อห้องปฏิบัติการ <select name="id_lab">
-    <?php foreach($laboratory_List as $lab)
-        {echo "<option value = $lab->id_lab";
-        if($lab->id_lab==$stafflab->id_lab){echo "selected='selected'";}
-        echo "> $lab->name_lab</option>";}
+
+<label>ชื่อห้องปฏิบัติการ <select name="id_lab">
+    <?php foreach($lab as $lab2) 
+        {echo "<option value = $lab2->id_lab";
+        if($lab2->id_lab==$stafflab->id_lab){echo " selected='selected'";}
+        echo "> $lab2->name_lab</option>";}
         ?>
-</select></label><br>
+    </select></label><br>
 
 <input type="hidden" name="controller" value="staff_in_lab"/>
 
