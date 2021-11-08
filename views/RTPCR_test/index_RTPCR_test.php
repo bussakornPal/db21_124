@@ -1,5 +1,7 @@
 <table border = 1> 
 
+<br>new RT-PCR Test <a href=?controller=RTPCR_test&action=newRTPCR_test> click</a><br>
+
 <tr> 
     <td>รหัสผลตรวจRTPCR</td> <td>วันที่</td> <td>เวลา</td> 
     <td>รหัสประชาชน</td> <td>ชื่อผู้ป่วย</td> <td>นามสกุลผู้ป่วย</td>
@@ -12,7 +14,6 @@
 </tr> 
 
 
-<br>
 <form method="get" action="">
         <input type="text" name="key">
         <input type="hidden" name="controller" value="RTPCR_test">
