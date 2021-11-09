@@ -10,7 +10,7 @@
     <td>ชื่อเจ้าหน้าที่วิเคราะห์</td> <td>นามสกุลเจ้าหน้าที่วิเคราะห์</td>
     <td>รหัสห้องปฏิบัติการ</td> <td>ชื่อห้องปฏิบัติการ</td>
 
-    <td>update</td> <td>delete</td> 
+    <td>update</td> 
 </tr> 
 
 
@@ -41,11 +41,9 @@ search</button>
                <td>$RT->name_lab</td>
 
                <td>
-               update
+               <a href=?controller=RTPCR_test&action=updateForm&id_RTPCR=$RT->id_RTPCR>update</a>
                </td> 
-               <td>
-               delete
-               </td> 
+               
             </tr>";
 }
 echo "</table>";

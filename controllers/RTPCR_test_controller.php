@@ -28,5 +28,14 @@
         RTPCR_test::add($id_RTPCR,$date,$time,$test_result,$id_atk,$id_staff_inlab);
         RTPCR_Test_Controller::index();
     }
+    public function updateForm()
+    {   
+        //echo "Hi";
+        $id_RTPCR=$_GET['id_RTPCR'];
+        $RT=RTPCR_test::get($id_RTPCR);
+        $atk=ATKtest::getAll();
+        $stafflab=staff_in_lab::getAll();
+        require_once('./views/RTPCR_test/updateForm.php');
+    }
 
 }?>
