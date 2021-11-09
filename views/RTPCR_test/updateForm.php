@@ -26,6 +26,14 @@
         ?>
     </select></label><br>
 
+<label>เจ้าหน้าที่วิเคราะห์ <select name="id_staff_inlab">
+    <?php foreach($stafflab as $sl) 
+        {echo "<option value = $sl->id_staff_inlab";
+        if($sl->id_staff_inlab==$RT->id_staff_inlab){echo " selected='selected'";}
+        echo "> $sl->id_atk $sl->first_name_inlab $sl->last_name_inlab </option>";}
+        ?>
+    </select></label><br>
+
 <input type="hidden" name="controller" value="RTPCR_test"/>
 
 <input type="hidden" name="id" value="<?php echo $RT->id_RTPCR; ?>"/>

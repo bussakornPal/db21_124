@@ -37,5 +37,18 @@
         $stafflab=staff_in_lab::getAll();
         require_once('./views/RTPCR_test/updateForm.php');
     }
+    public function update()
+    {   
+        //echo "eye";
+        $id_RTPCR=$_GET['id_RTPCR'];
+        $date=$_GET['date'];
+        $time=$_GET['time'];
+        $test_result=$_GET['test_result'];
+        $id_atk=$_GET['id_atk'];
+        $id_staff_inlab=$_GET['id_staff_inlab'];
+        $id=$_GET['id'];
+        RTPCR_test::update($id_RTPCR,$date,$time,$test_result,$id_atk,$id_staff_inlab,$id);
+        RTPCR_Test_Controller::index();
+    }
 
 }?>

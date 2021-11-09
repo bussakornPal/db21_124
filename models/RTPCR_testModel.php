@@ -146,6 +146,7 @@ class RTPCR_test{
     }
     public static function update($id_RTPCR,$date,$time,$test_result,$id_atk,$id_staff_inlab,$id)
     {
+        //echo $id_RTPCR,$date,$time,$test_result,$id_atk,$id_staff_inlab,$id;
         require("connection_database.php");
         $sql="UPDATE `RTPCR_test` SET `id_RTPCR`='$id_RTPCR',`date`='$date',`time`='$time',`test_result`='$test_result',`id_atk`='$id_atk',`id_staff_inlab`='$id_staff_inlab' WHERE id_RTPCR = '$id'";
         $result=$conn->query($sql);
