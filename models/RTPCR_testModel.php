@@ -136,6 +136,23 @@ class RTPCR_test{
         return $RTPCRList;
     
     }
+    public static function add($id_RTPCR,$date,$time,$test_result,$id_atk,$id_staff_inlab)
+    {   
+        require("connection_database.php");
+        $sql = "INSERT INTO `RTPCR_test`(`id_RTPCR`, `date`, `time`, `test_result`, `id_atk`, `id_staff_inlab`) VALUES ('$id_RTPCR','$date','$time','$test_result','$id_atk','$id_staff_inlab')";
+        $result = $conn->query($sql);
+        require("connection_close.php");
+        return ;
+    }
+    public static function update($id_RTPCR,$date,$time,$test_result,$id_atk,$id_staff_inlab,$id)
+    {
+        require("connection_database.php");
+        $sql="UPDATE `RTPCR_test` SET `id_RTPCR`='$id_RTPCR',`date`='$date',`time`='$time',`test_result`='$test_result',`id_atk`='$id_atk',`id_staff_inlab`='$id_staff_inlab' WHERE id_RTPCR = '$id'";
+        $result=$conn->query($sql);
+        require("connection_close.php");
+        return ;
+
+    }
 
 
     
